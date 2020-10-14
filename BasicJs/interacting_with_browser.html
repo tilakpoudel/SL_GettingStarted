@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interacting with Browser</title>
+  </head>
+  <body>
+    <h2>Various ways to interact with the Browser</h2>
+    <ul>
+      <li>Window Object</li>
+      <li>Navigator Object</li>
+      <li>History Object</li>
+      <li>Screen Object</li>
+      <li>LOcation Object</li>
+    </ul>
+
+    <h3>Window Object</h3>
+    <p>The window object represents an open window in a browser.</p>
+    <h4>Methods</h4>
+    <li>Alert <button onclick="openAlert()">Click to see Alert</button></li>
+   
+    <li>Open <button onclick="openNewWindow()">openNewWindow</button>
+    <p>
+        Click the button to open a new window, and assure that the new window does
+        NOT GET focus (send the new window to the background).
+    
+    </p>
+    </li>
+    <li>Confirm <button onclick="openConfirm()">Click to see Confirm Box</button>
+        <div id="confirm_div_id">
+            <h5 id="confirm_ans">Are you understading me ?? : </h5>
+        </div>
+       
+    </li>
+    
+    <h3>History Object</h3>
+    <li>Go Back 
+        <button onclick="goBack()">Go back to prev page</button>
+    </li>
+    <li>Go FOrward
+        <button onclick="goFordward()">Go FOrward</button>
+    </li><li>Go Back With Step
+        <button onclick="goBackWithStep()">Go back With 2 pages</button>
+    </li>
+
+    </li>
+    <li>LOcation 
+        <button onclick="getDomainName()">get domain name</button>
+    </li>
+    
+    
+  <!-- js section -->
+  <script>
+    function openAlert() {
+      alert("Hello i am window alert");
+    }
+    function openNewWindow() {
+        var myWindow = window.open("", "", "width=200, height=100");
+        myWindow.document.write("<p>Hello all i am new window with height 100 and width 100 !</p>");
+        myWindow.blur(); // makes the window blur
+    }
+    function openConfirm() {
+        var result = confirm("Are you ready to move Ahead ?");
+        // document.getElementById("confirm_ans").innerText=result;
+        if(result){
+            alert(" Fine ... Lets move forward");
+        }else{
+            alert("Are you still confused ?? Lets me know where are you confused");
+
+        }
+        var h3 = document.createElement("h3");
+        var text = document.createTextNode("Your ans is :"+result);
+        h3.appendChild(text);
+        document.getElementById("confirm_div_id").appendChild(h3);
+    }
+        alert("Window history length is"+history.state);
+        function goBack() {
+            window.history.back();
+        }
+        function goFordward() {
+            alert("forward");
+            window.history.forward();
+        }
+        function goBackWithStep() {
+            window.history.go(-2);
+        }
+        function getDomainName(){
+            alert(location.hostname);
+            alert(location.protocol);
+            var protocol = location.protocol; 
+            if(protocol == "https:"){
+                alert("ok you can access");
+            }
+            else{
+                alert("Sorry you cannot access");
+            }
+        }
+  </script>
+</html>

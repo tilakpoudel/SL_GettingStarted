@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      mygrade = prompt("Enter your grade .. ");
+      grade = mygrade.toUpperCase();
+      document.write("Entering switch block<br />");
+      switch (grade) {
+        case "A":
+          document.write("Good job<br />");
+
+          let str = " My value is :";
+          document.write(" value of str befor loop is: " + str + "<br />");
+          let i = 0;
+          for (i; i < 5; i++) {
+            document.write(" value of i in loop is: " + i + "<br />");
+
+            str = str + i;
+            document.write(" value of str inside loop is: " + str + "<br />");
+          }
+          document.write(" Result str after loop is: " + str + "<br />");
+          break;
+        case "B":
+          document.write("Pretty good<br />");
+          break;
+        case "C":
+          document.write("Passed<br />");
+          break;
+        case "D":
+          document.write("Not so good<br />");
+          break;
+        case "F":
+          document.write("Failed<br />");
+          break;
+        default:
+          document.write("Unknown grade<br />");
+      }
+      document.write("Exiting switch block");
+    </script>
+  </head>
+  <body>
+    <h1>Lets test your Grade !</h1>
+  </body>
+</html>

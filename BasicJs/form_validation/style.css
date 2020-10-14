@@ -1,0 +1,48 @@
+body {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgb(78 148 234)
+  );
+}
+fieldset {
+  border: 1px solid black;
+  margin-top: 20px;
+}
+legend {
+  border: 1px solid #5a5;
+}
+.group {
+  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  width: 95%;
+}
+.group label {
+  width: 100px;
+  display: inline-block;
+}
+.group#dob_group input {
+  width: 16%;
+}
+.group input,
+select {
+  width: 65%;
+  height: 20px;
+}
+.group input[type="radio"],
+input[type="checkbox"] {
+  width: 5%;
+}
+input[type="submit"],
+input[type="reset"] {
+  border: none;
+  background-color: #23a;
+  padding: 20px;
+  color: #fff;
+  width: 15%;
+}
+
+.error_message {
+  color: #f00;
+}

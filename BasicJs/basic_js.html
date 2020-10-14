@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js - Getting Started</title>
+    <!-- external file  -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <!-- style you page as you want  -->
+  <style>
+    p {
+      font-family: "helvetica neue", helvetica, sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      border: 2px solid rgba(0, 0, 200, 0.6);
+      background: rgba(0, 0, 200, 0.3);
+      color: rgba(0, 0, 200, 0.6);
+      box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+      border-radius: 10px;
+      padding: 3px 10px;
+      display: inline-block;
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <!-- here goes out html content -->
+    <h1>
+      Hello Every One .. Are you excited to begin our Journey with JavaScript
+      ???
+    </h1>
+    <p>Hello : Tilak</p>
+    <button onclick="clickFunction(1)">1</button>
+    <button onclick="clickFunction(2)">2</button>
+    <button onclick="clickFunction(3)">3</button>
+    <br />
+    <button onclick="checkBoolean()">Boolean</button>
+    <button onclick="checkNumber()">Number</button>
+  </body>
+
+  <!-- here goes the exciting part: JavaScript -->
+  <!-- internal js -->
+  <script>
+    // write code of your fucntion
+
+    function checkBoolean() {
+      // Boolean inbuild type
+      var b = new Boolean(true);
+      console.log("b type is :" + typeof b);
+      console.log(
+        "b value in string is :" +
+          b.toString() +
+          "data type is :" +
+          typeof b.toString()
+      );
+      console.log("b value is :" + b.valueOf());
+
+      alert(b);
+    }
+
+    function checkNumber() {
+      // Boolean inbuild type
+      var b = new Number(100);
+      console.log("b type is :" + typeof b);
+
+      console.log("Number can hold max value is :" + Number.MAX_VALUE);
+      console.log("Number can hold min value is :" + Number.MIN_VALUE);
+      console.log("b in locale  :" + b.toLocaleString());
+
+      alert(b);
+    }
+
+    // function definition
+    function clickFunction(n) {
+      alert("You clicked me !! and my value is :" + n);
+
+      // object creation
+      var score = new Object(); // object creation by constructor
+      score.ram = "68";
+      score.shyam = "76";
+      score.hari = "39";
+      score.keshav = "73";
+      console.log(score);
+      for (name in score) {
+        console.log(name + " scored " + score[name]);
+        // console.log("i am in console : Ram !");
+      }
+    }
+
+    const para = document.querySelector("p");
+
+    para.addEventListener("click", updateName);
+
+    function updateName() {
+      let name = prompt("Enter a new name");
+      para.textContent = "How are you  : " + name;
+    }
+
+    var o1 = new Object();
+    o1.data = "hello";
+    var o2 = o1;
+    o2.data += " World";
+    // window.alert(o1.data);
+    // alert("Welcome to our class ");
+    // var ans = prompt("hello Ram are you understanding the topic ??");
+    // console.log("Ram said: " + ans);
+  </script>
+</html>

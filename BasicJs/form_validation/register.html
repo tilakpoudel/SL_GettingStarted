@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="form_validation.js"></script>
+</head>
+<body id="my_body" >
+    <div style="margin:20px;">
+        <h1>Form Validation Using JavaScript</h1>
+        <form action="" method="post" name="register" onsubmit="return validateForm()">
+            <fieldset>
+                <legend>Student Registration Form </legend>
+                <div class="group"> 
+                    <label for="name">Name :</label>
+                    <input type="text" name="name" id="name" placeholder="Your sweet name">
+                    <span id="err_name" class="error_message"></span>
+                </div>
+
+                <div class="group">
+                    <label for="username">Username :</label>
+                    <input type="text" name="username" id="username" placeholder="username here">
+                    <span id="err_username" class="error_message"></span>
+                </div>
+
+                <div class="group">
+                    <label for="password">password</label>
+                    <input type="password" name="password" id="password" placeholder="password">
+                    <span id="err_password" class="error_message"></span>
+                </div>
+
+                <div class="group">
+                    <label for="">Confirm password</label>
+                    <input type="password" name="repassword" id="repassword" placeholder="confirm password">
+                    <span id="err_repassword" class="error_message"></span>
+                </div>
+
+                <div class="group">
+                    <label for="">Phone </label>
+                    <input type="text" name="phone" id="phone" placeholder="Phone No.">
+                    <span id="err_phone" class="error_message"></span>
+                </div>
+                <div class="group">
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Your email">
+                    <span id="err_email" class="error_message"></span>
+                </div>
+                <div class="group" id="dob_group">
+                    <label for="">DOB</label>
+                    <input type="text" name="year" id="year" placeholder="YYYY">
+                    <input type="text" name="month" id="month" placeholder="MM">
+                    <input type="text" name="day" id="day" placeholder="DD">
+                    <span id="err_dob" class="error_message"></span>
+                </div>
+                <div class="group">
+                    <label for="">Country</label>
+                    <select name="country" id="country">
+                        <option value="">Select Country</option>
+                        <option value="nepal">Nepal</option>
+                        <option value="india">India</option>
+                        <option value="china">China</option>
+                    </select>
+                    <span id="err_country" class="error_message"></span>
+                </div>
+
+                <div class="group">
+                    <label for="">Gender</label>
+                    <input type="radio" name="gender" id="gender_m" value="Male"> Male
+                    <input type="radio" name="gender" id="gender_f" value="Female"> Female
+                    <span id="err_gender" class="error_message"></span>
+                </div>
+
+                <div class="group">
+                    <label for="">Faculty</label>
+                    <input type="checkbox" name="faculty[]" value="csit"> CSIT
+                    <input type="checkbox" name="faculty[]" value="bca"> BCA
+                    <input type="checkbox" name="faculty[]" value="ca"> CA
+                    <span id="err_faculty" class="error_message"></span>
+                </div>
+
+                <div class="group">
+                    <input type="checkbox" name="terms" value="accept_terms"> I Accept Terms and Condition
+                    <span id="err_terms" class="error_message"></span>
+                </div>
+
+                <div class="group" id="btn_group">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Clear Form">
+                </div>
+
+
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+</html>
