@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Form Validation</title>
+    <!-- link to css file -->
     <link rel="stylesheet" href="style.css">
+    <!-- link to js file -->
     <script src="form_validation.js"></script>
 </head>
 <body id="my_body" >
     <div style="margin:20px;">
         <h1>Form Validation Using JavaScript</h1>
-        <form action="" method="post" name="register" onsubmit="return validateForm()">
+        <form action="" method="post" name="register" onsubmit="return validateRegisterForm()">
             <fieldset>
                 <legend>Student Registration Form </legend>
                 <div class="group"> 
@@ -44,7 +46,7 @@
                 </div>
                 <div class="group">
                     <label for="">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Your email">
+                    <input type="text" name="email" id="email" placeholder="Your email">
                     <span id="err_email" class="error_message"></span>
                 </div>
                 <div class="group" id="dob_group">

@@ -1,7 +1,8 @@
-function validateForm(){
+function validateRegisterForm(){
     // alert("hello form");
     // get the value from the form 
     var error = 0;
+
     var name = document.register.name.value;
     var username = document.register.username.value;
     var password = document.register.password.value;
@@ -34,8 +35,7 @@ function validateForm(){
         document.getElementById('username').focus();
         error++;
     }else{
-
-        if(username.length < 8){
+        if(username.length <= 8){
             document.getElementById('username').focus();
             document.getElementById('err_username').innerHTML="User Name should be of min 8 character";
             error++;
@@ -52,7 +52,11 @@ function validateForm(){
         document.getElementById('err_password').innerHTML="password is Required";
         document.getElementById('password').focus();
         error++;
-    }else{
+    }else if(password.length <= 8){
+            document.getElementById('password').focus();
+            document.getElementById('err_password').innerHTML="Password should be of min 8 character";
+            error++;
+        }else{
         document.getElementById('err_password').innerHTML="";
         // success_msg+= "Hello "+ password + "<br>";
     }
@@ -66,7 +70,7 @@ function validateForm(){
         document.getElementById('err_repassword').innerHTML="";
     }
 
-    console.log(password, repassword);
+    // console.log(password, repassword);
     // validation for password match
     if(repassword != password){
         document.getElementById('err_repassword').innerHTML="Password Not matched  ";
