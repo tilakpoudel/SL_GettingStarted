@@ -81,15 +81,15 @@ function validateRegisterForm(){
         success_msg+= "Password is "+ password + "<br>";
     }
 
-    // validation for phone
-    var phone_pattern = /^([0-9]{10})$/;
+    // validation for phone // 9804493112 ncell // 9867580017 ntc
+    var phone_pattern = /^(98[0-3]{1}[0-9]{7}|98[4-6]{1}[0-9]{7})$/;
     if(phone.trim() ==''){
         document.getElementById('err_phone').innerHTML="Phone No is required ";
         document.getElementById('phone').focus();
         error++;
     }else if(!phone_pattern.test(phone)){
         error++;
-        document.getElementById('err_phone').innerHTML="Phone No must be in number format with 10 digit ";
+        document.getElementById('err_phone').innerHTML="Phone No must be in number format with 10 digit starting with 98 ";
     }else if(phone.length < 10){
         document.getElementById('err_phone').innerHTML="Phone No must be 10 digit ";
         error++;
