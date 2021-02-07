@@ -12,8 +12,9 @@
         }
 
         #registration_form {
-            text-align: center;
+            /* text-align: center; */
             background-color: #99bf5b;
+            padding: 50px;
         }
     </style>
 </head>
