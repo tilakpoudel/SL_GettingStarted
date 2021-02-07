@@ -28,6 +28,11 @@
         echo "<br>";
         $myCar = new Car("red", "Toyota");
         echo $myCar -> message();
+
+        // echo "<br>";
+        // $myCar = new Car();
+        // echo $myCar -> message();
+
     ?>
 </body>
 

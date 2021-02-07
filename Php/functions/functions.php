@@ -35,7 +35,7 @@
     <p>You can set a parameter to have a default value if the function's caller doesn't pass it.</p>
 
     <?php
-        function setHeight(int $minheight = 50) {
+        function setHeight($minheight = 50) { // default value
             echo "The height is : $minheight <br>";
         }
         
@@ -71,19 +71,19 @@
     </p>
     <?php
         function addFive($num) {
-        $num += 5;
+            $num += 5;
         }
         
         function addSix(&$num) {
-        $num += 6;
+            $num += 6;
         }
         
         $orignum = 10;
+        addSix( $orignum );
         addFive( $orignum );
         
         echo "Original Value is $orignum<br />";
         
-        addSix( $orignum );
         echo "Original Value is $orignum<br />";
     ?>
 
