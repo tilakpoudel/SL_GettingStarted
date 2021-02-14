@@ -6,18 +6,18 @@
       echo ( "Error in opening new file" );
       exit();
    }
-   fwrite( $file, "This is  a simple test file created\n" );
+   fwrite( $file, "hello bca classs\n" );
    fclose( $file );
 ?>
 <html>
 
 <head>
-    <title>Writing a file using PHP</title>
+   <title>Writing a file using PHP</title>
 </head>
 
 <body>
 
-    <?php
+   <?php
          $filename = "test.txt";
          $file = fopen( $filename, "r" ); // open in read mode
          
