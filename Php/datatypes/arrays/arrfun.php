@@ -27,7 +27,7 @@
     $a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
     $a2=array("e"=>"red","f"=>"green","g"=>"blue");
     
-    $result=array_diff($a1,$a2);
+    $result=array_diff($a2,$a1);
     print_r($result);
     // Array ( [d] => yellow )
     ?>
@@ -51,8 +51,8 @@
 
     <h2>The array_search() function search an array for a value and returns the key.</h2>
     <?php
-        $a=array("a"=>"red","b"=>"green","c"=>"blue");
-        echo array_search("red",$a);
+        $a=array("a"=>"red1","b"=>"green","c"=>"blue");
+        echo array_search("red1",$a);
     ?>
     <h2>The array_slice() function returns selected parts of an array.</h2>
     <?php

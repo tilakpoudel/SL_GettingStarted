@@ -11,19 +11,15 @@
 <body>
     <h2>Passing Arguments by Reference</h2>
     <?php
-        
         function addFive($num) {
             $num += 5;
         }
-        
         function addSix(&$num) {
             $num += 6;
         }
-        
         $orignum = 10;
         addFive( $orignum );
         echo "Original Value is $orignum<br />"; // 10
-        
         addSix( $orignum );
         echo "Original Value is $orignum<br />"; // 16
     ?>

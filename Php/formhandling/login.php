@@ -14,8 +14,11 @@
     print_r($_POST)  ;
     $name=$_POST["name"];//receiving name field value in $name variable  
     $password=$_POST["password"];//receiving password field value in $password variable  
-      
-    echo "Welcome: $name, your password is: $password";  
+    $age=$_POST["age"];//receiving password field value in $password variable
+    var_dump($age);
+    $sum = $age+10;
+    echo($sum);
+    // echo "Welcome: $name, your password is: $password, age is:$age+1";  
     ?>
 </body>
 

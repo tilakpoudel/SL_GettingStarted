@@ -20,7 +20,8 @@
             $college = "nepathya";  
             $faculty = "bca";  
             echo $college;  
-            echo $faculty;  
+            echo $facult;  
+            die("heelo");
         ?>
         </li>
         <li> <b>Fatal Error </b><br>
@@ -42,7 +43,7 @@
                   
                 //call the function that is not defined  
                 //Generate fatal error  
-                catch_fatal_error();  
+                // catch_fatal_error();  
                 //echo "Fatal Error";     
             ?>
         </li>

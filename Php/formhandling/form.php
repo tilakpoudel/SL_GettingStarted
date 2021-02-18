@@ -21,6 +21,10 @@
                 <td> <input type="password" name="password" /></td>
             </tr>
             <tr>
+                <td>Age:</td>
+                <td> <input type="text" name="age" /></td>
+            </tr>
+            <tr>
                 <td colspan="2"><input type="submit" value="login" /> </td>
             </tr>
         </table>
