@@ -27,6 +27,13 @@
       
     //second function call  
         static_var();  // prints 5,7
+
+        //second function call
+        static_var(); // prints 5,7
+        //second function call
+        static_var(); // prints 5,7
+        //second function call
+        static_var(); // prints 5,7
     ?>
 </body>
 
