@@ -12,12 +12,11 @@
     <h2>Create database with php </h2>
     <?php
         $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $username = "root"; // your username
+        $password = ""; // your phpmyadmin password
 
         // Create connection
         $conn = new mysqli($servername, $username, $password);
-        // print_r($conn);
         // Check connection
         if ($conn->connect_error) {
             die(" Connection failed: " . $conn->connect_error);
@@ -26,7 +25,7 @@
         }
         
         // Create database
-        $sql = "CREATE DATABASE bca_db";
+        $sql = "CREATE DATABASE bca_db"; // database name
         if ($conn->query($sql) === TRUE) {
             echo "Database created successfully <br>";
         } else {

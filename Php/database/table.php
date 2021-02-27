@@ -25,7 +25,7 @@
         }
 
         // sql to create table
-        $sql = "CREATE TABLE MyGuests (
+        $sql = "CREATE TABLE Devotees (
             id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
             firstname VARCHAR(30) NOT NULL,
             lastname VARCHAR(30) NOT NULL,
@@ -34,7 +34,7 @@
         )";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Table MyGuests created successfully";
+            echo "Table Devotees created successfully";
         } else {
             echo "Error creating table: " . $conn->error;
         }

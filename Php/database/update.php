@@ -12,7 +12,7 @@
     <h4>Update</h4>
     <?php
         include("conn.php");
-        $sql = "UPDATE MyGuests SET lastname='Poudell' WHERE id=2";
+        $sql = "UPDATE Devotees SET lastname='Poudell' WHERE id=2";
 
         if ($conn->query($sql) === TRUE) {
             echo "Record updated successfully";

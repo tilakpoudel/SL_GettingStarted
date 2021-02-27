@@ -11,9 +11,9 @@
 <body>
     <h3>Select data</h3>
     <?php
-        include("conn.php");
+        include("conn.php"); // include the data base connection file
 
-        $sql = "SELECT id, firstname, lastname FROM MyGuests";
+        $sql = "SELECT id, firstname, lastname FROM Devotees";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -32,7 +32,7 @@
             echo "
         </table>";
         } else {
-        echo "0 results";
+        echo "No data found";
         }
         $conn->close();
     ?>
