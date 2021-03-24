@@ -19,20 +19,35 @@
         {  
             public function fun2();  
         }  
-    class cls1 implements i1,i2  
+        interface product{
+            function setName();
+            function setPrice();
+        }
+    class cls1 implements i1,i2,product 
     {  
         function fun1()  
         {  
-            echo "hello  ";  
+            echo "hello  <br>";  
         }  
         function fun2()  
         {  
-            echo "how are you ?";  
+            echo "how are you ? <br>";  
         }  
+        function setName()
+        {
+        echo "my product name is set <br>";
+        }
+        function setPrice()
+        {
+        echo "my product price is 200 <br>";
+        }
+
     }  
     $obj= new cls1();  
     $obj->fun1();  
     $obj->fun2();  
+    $obj->setName();
+    $obj->setPrice();
       
     ?>
 </body>

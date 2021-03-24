@@ -22,21 +22,42 @@
     {  
         abstract public function name();  
         abstract public function faculty();  
+        public function college(){
+            echo "nepathya colege";
+        }
+        public function sum($a,$b){
+            $sum = 10+20;
+
+            echo $sum;
+            // echo "nepathya colege";
+        }
     }  
     class b extends a  
     {  
         public function name()  
         {  
-            echo "Nepathya ";  
+            echo "Nepathya <br>";  
         }  
         public function faculty()  
         {  
-            echo "BCA ";     
+            echo "BCA <br>";     
         }  
+        public function college(){
+            echo "sky colege <br>";
+        }
+
+        public function sum($a,$b){
+        $sum = $a+$b;
+        
+        echo $sum;
+        // echo "nepathya colege";
+        }
     }  
     $obj = new b();  
     $obj->name();  
     $obj->faculty();  
+    $obj->college();
+    $obj->sum();
     ?>
 </body>
 
