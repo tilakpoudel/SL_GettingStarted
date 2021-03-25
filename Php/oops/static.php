@@ -27,15 +27,18 @@
         static $count; 
           
         public static function getCount() { 
-            return self::$count++; // use self to access static member inside class.
+            return ++self::$count; // use self to access static member inside class.
         } 
     } 
       
     solution::$count = 1; 
       
-    for($i = 0; $i < 5; $i++) { 
+    for($i = 0; $i < 5; ++$i) { 
+        echo "before ".solution::$count; 
         echo 'The next value is: '.  
-        solution::getCount() . "<br>"; 
+        solution::getCount() ; 
+        echo "after ".solution::$count;
+        echo"<br>";
     } 
       
     ?>
