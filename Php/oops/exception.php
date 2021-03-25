@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>exception</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>exception</title>
 </head>
 
 <body>
-    <?php
+  <?php
     //create function with an exception
     function checkNum($number) {
       if($number>1) {
@@ -20,14 +20,17 @@
     
     //trigger exception in a "try" block
     try {
-      checkNum(2);
+      checkNum(0);
       //If the exception is thrown, this text will not be shown
-      echo 'If you see this, the number is 1 or below';
+      echo 'If you see this, the number is 1 or below <br>';
     }
     
     //catch exception
     catch(Exception $e) {
-      echo 'Message: ' .$e->getMessage();
+      echo 'Message: ' .$e->getMessage()."<br>";
+    }
+    finally{
+      echo"finally i am here";
     }
     ?>
 </body>
