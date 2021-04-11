@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Object</title>
+  </head>
+  <body>
+    <button onclick="openWin()">Open "myWindow"</button>
+    <button onclick="closeWin()">Close "myWindow"</button>
+    <br /><br />
+    <button onclick="checkWin()">Has "myWindow" been closed?</button>
+    <br /><br />
+    <div id="msg"></div>
+    <button onclick="myFunction()">Alert</button>
+    <button onclick="window.print()">Print this page</button>
+    <button onclick="openPrompt()">Open Prompt</button>
+    <p id="prompt_msg"></p>
+    <button onclick="openConfirm()">Confirm Me</button>
+    <p id="confirm_msg"></p>
+
+    <script>
+      var myWindow;
+
+      function openWin() {
+        myWindow = window.open("", "myWindow", "width=400, height=200");
+      }
+
+      function closeWin() {
+        if (myWindow) {
+          myWindow.close();
+        }
+      }
+
+      function checkWin() {
+        if (!myWindow) {
+          document.getElementById("msg").innerHTML =
+            "'myWindow' has never been opened!";
+        } else {
+          if (myWindow.closed) {
+            document.getElementById("msg").innerHTML =
+              "'myWindow' has been closed!";
+          } else {
+            document.getElementById("msg").innerHTML =
+              "'myWindow' has not been closed!";
+          }
+        }
+      }
+      function myFunction() {
+        alert("Hello! I am an alert box!");
+      }
+      function openPrompt() {
+        var person = prompt("Please enter your name", "Ram");
+        if (person != null) {
+          document.getElementById("prompt_msg").innerHTML =
+            "Hare Krishna!!  " + person + "! How are you today?";
+        }
+      }
+
+      function openConfirm() {
+        let result = confirm("Are you sure ? ");
+        document.getElementById("confirm_msg").innerHTML =
+          "Hare Krishna!! Confirm result :" + result;
+      }
+    </script>
+  </body>
+</html>

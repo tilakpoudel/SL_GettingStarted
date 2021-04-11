@@ -1,7 +1,7 @@
 <?php  
     setcookie("batch", "BCA 2074",time()+1*60*60);  //expire after 1 hrs 
-    setcookie("name", "Tilak Poudel");  //expire after 1 hrs
-    setcookie("name","",time()-3600) // delete cookie
+    setcookie("name", "BalaRam");  //expire after 1 hrs
+    // setcookie("name","",time()-3600) // delete cookie by setting time earlier than current time
 ?>
 <html>
 
@@ -13,10 +13,11 @@
         if(!isset($_COOKIE["batch"])) {  
             echo "Sorry, cookie is not found!";  
         } else {  
-            echo "<br/>Cookie Value: " . $_COOKIE["batch"];  
+            echo "<br/>Cookie Value: Batch  " . $_COOKIE["batch"];  
             echo "<br />Name: " . $_COOKIE["name"];
         }  
     ?>
+    <br>
     <a href="https://github.com/tilakpoudel/SL_GettingStarted">Get Codes</a>
 </body>
 

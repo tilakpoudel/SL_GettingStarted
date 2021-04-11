@@ -5,7 +5,7 @@ session_start();
 
 <body>
     <?php  
-        echo "Welcome to  : ".$_SESSION["class"]; 
+        echo "Welcome to  : ".$_SESSION["class"]." from ".$_SESSION["college"]; 
     ?>
     <br>
     <a href="session3.php">Destroy Session</a>

@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html>
-
-<body>
-
+  <body>
     <h2>JavaScript addEventListener()</h2>
 
-    <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+    <p>
+      This example uses the addEventListener() method to attach a click event to
+      a button.
+    </p>
 
     <button id="myTime">Get My Time</button>
     <button onclick="clickMe()">Click me to see effect</button>
 
-    <p id="intro">Hello Raj </p>
-    <p id="demo"> My Time :</p>
+    <p id="intro">Hello Raj</p>
+    <p id="demo">My Time :</p>
 
-    <input type="text" id="my_text" onkeyup="changedEvent()">
-    
-    <!-- <p>This example uses the addEventListener() method to add two click events to the same button.</p>
-    
+    <input type="text" id="my_text" onkeyup="changedEvent()" />
+
+    <p>
+      This example uses the addEventListener() method to add two click events to
+      the same button.
+    </p>
+
     <button id="myBtn">Add two Events on me</button>
 
     <p>This example uses the addEventListener() method on the window object.</p>
-    
-    <p>Try resizing this browser window to trigger the "resize" event handler.</p>
-    
+
+    <p>
+      Try resizing this browser window to trigger the "resize" event handler.
+    </p>
+
     <p id="value_at_resize"></p>
-    <p id="resize_demo"></p> -->
+    <p id="resize_demo"></p>
 
     <script>
-        document.getElementById("myTime").addEventListener("click", displayDate);
-        var my_value = document.getElementById("intro");
+      document.getElementById("myTime").addEventListener("click", displayDate);
+      var my_value = document.getElementById("intro");
 
-        function displayDate() {
-            // document.getElementById("demo").innerHTML = Date();
-            document.getElementById("demo").innerHTML = "the text from intro is :"+ my_value.innerHTML;
+      function displayDate() {
+        // document.getElementById("demo").innerHTML = Date();
+        document.getElementById("demo").innerHTML =
+          "the text from intro is :" + my_value.innerHTML;
+      }
 
-        }
+      function changedEvent() {
+        alert("you changed me.");
+      }
 
-            function changedEvent() {
-                alert("you changed me.");
-            }
+      function clickMe() {
+        // document.getElementById("demo").innerHTML = Date();
+        alert("you clicked me ");
+      }
+      var x = document.getElementById("myBtn");
+      x.addEventListener("click", myFunction);
+      x.addEventListener("click", someOtherFunction);
 
-            function clickMe() {
-                // document.getElementById("demo").innerHTML = Date();
-                alert("you clicked me ");
-            }
-        var x = document.getElementById("myBtn");
-            x.addEventListener("click", myFunction);
-            x.addEventListener("click", someOtherFunction);
+      function myFunction() {
+        alert("Hello World!");
+      }
 
-        function myFunction() {
-            alert("Hello World!");
-        }
+      function someOtherFunction() {
+        alert("This function was also executed!");
+      }
 
-        function someOtherFunction() {
-            alert("This function was also executed!");
-        }
-
-        window.addEventListener("resize", function () {
-            
-                document.getElementById("value_at_resize").innerHTML = "I have been resized";
-                document.getElementById("resize_demo").innerHTML = "Random Value is :"+ Math.random();
-            });
+      window.addEventListener("resize", function () {
+        document.getElementById("value_at_resize").innerHTML =
+          "I have been resized";
+        document.getElementById("resize_demo").innerHTML =
+          "Random Value is :" + Math.random();
+      });
     </script>
-
-</body>
-
+  </body>
 </html>

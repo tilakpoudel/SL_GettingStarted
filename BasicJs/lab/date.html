@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Object</title>
+  </head>
+  <body>
+    <h2>JavaScript Date Object</h2>
+    <p>Current Time : <span id="current_time"></span></p>
+    <p>
+      The internal clock in JavaScript counts from midnight January 1, 1970.
+    </p>
+    <p>
+      The getTime() function returns the number of milliseconds since then:
+      <span id="demo"></span>
+    </p>
+    <p>
+      The getFullYear() function returns the the year of a date as a four digit
+      number:
+      <span id="getFullYear"></span>
+    </p>
+    <p>
+      The getMonth() method returns the month of a date as a number (0-11):
+      <span id="getMonth"></span>
+    </p>
+    <p>
+      The getDate() method returns the day of the month (from 1-31) :
+      <span id="getDate"></span>
+    </p>
+    <p>
+      The getHours() method returns the hours of a date as a number (0-23):
+      <span id="getHours"></span>
+    </p>
+    <p>
+      The getMinutes() method returns the minutes of a date as a number (0-59):
+      <span id="getMinutes"></span>
+    </p>
+    <p>
+      The getSeconds() method returns the seconds as a number (0-59):
+      <span id="getSeconds"></span>
+    </p>
+    <p>
+      Returns the milliseconds (from 0-999)
+      <span id="getMilliseconds"></span>
+    </p>
+    <p>
+      The getDay() method returns the weekday of a date as a number (0-6):
+      <span id="getDay"></span>
+    </p>
+
+    <script>
+      var d = new Date();
+      document.getElementById("current_time").innerHTML = d;
+      document.getElementById("demo").innerHTML = d.getTime();
+      document.getElementById("getFullYear").innerHTML = d.getFullYear();
+      document.getElementById("getMonth").innerHTML = d.getMonth();
+      document.getElementById("getDate").innerHTML = d.getDate();
+      document.getElementById("getHours").innerHTML = d.getHours();
+      document.getElementById("getMinutes").innerHTML = d.getMinutes();
+      document.getElementById("getSeconds").innerHTML = d.getSeconds();
+      document.getElementById(
+        "getMilliseconds"
+      ).innerHTML = d.getMilliseconds();
+      document.getElementById("getDay").innerHTML = d.getDay();
+    </script>
+  </body>
+</html>
