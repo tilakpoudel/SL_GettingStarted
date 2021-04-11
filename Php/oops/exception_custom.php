@@ -19,7 +19,7 @@
       }
     }
     
-    $email = "someone@example.com";
+    $email = "someoneexample@abc.com";
     
     try {
       //check if
@@ -28,7 +28,8 @@
         throw new customException($email);
       }
       //check for "example" in mail address
-      if(strpos($email, "example") !== FALSE) {
+      // echo strpos($email, "example");
+      if(strpos($email, "example") > 0) {
         throw new Exception("$email is an example e-mail");
       }
     }

@@ -3,11 +3,13 @@
 
 <head>
     <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
     Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email"> <br>
     Email: <input type="text" name="email"> <br>
     <p>Click or move the mouse pointer over this paragraph.</p> <br>
     <p>If you double-click on me, I will disappear.</p> <br>

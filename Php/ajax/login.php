@@ -4,6 +4,8 @@ if (isset($_POST['username']) && $_POST['username'] && isset($_POST['password'])
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    // Your task : TODO:: connect to the database and perform check with the data from the database table and return response.
+
     if($username ==="radha" && $password ==="krishna"){
             // ...
         // based on successful authentication

@@ -2,8 +2,12 @@
 <html>
 
 <head>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- cdn of jquery-3 
+    {{-- <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script> --}}
+    -->
+    <script src="juerycdn.js"></script>
 </head>
 
 <body>
@@ -20,6 +24,9 @@
         $(document).ready(function() {
     $('#loginform').submit(function(e) {
         e.preventDefault();
+        // let data= $(this).serialize();
+        // let name = $("#username").val();
+        // console.log("data in form is",name);
         $.ajax({
             type: "POST",
             url: 'login.php',
@@ -39,6 +46,9 @@
                 {
                     alert('Invalid Credentials!');
                 }
+           },
+           error: function(err){
+               alert(err);
            }
        });
      });

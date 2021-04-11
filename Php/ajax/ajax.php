@@ -4,13 +4,15 @@
 <head>
   <script>
     function showHint(str) {
+      // alert("say helo");
       if (str.length == 0) {
           document.getElementById("txtHint").innerHTML = "";
           return;
       } else {
-          var xmlhttp = new XMLHttpRequest();
+          var xmlhttp = new XMLHttpRequest(); 
           xmlhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
+            console.log(this);
               document.getElementById("txtHint").innerHTML = this.responseText;
           }
           }
@@ -28,7 +30,7 @@
     <label for="fname">First name:</label>
     <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
   </form>
-  <p>Suggestions: <span id="txtHint"></span></p>
+  <p>Suggestions: <span id="txtHint">Enter Text And Get Suggestions</span></p>
 
 </body>
 
